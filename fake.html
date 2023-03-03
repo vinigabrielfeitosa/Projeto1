@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <header>
+        <div class="menu">
+            <h1 class="logo"><a href="index.html">Consulta API</a></h1>
+            <nav class="header-menu">
+                <ul class="lista">
+                    <li><a href="cep.html">CEP</a></li>
+                    <li><a href="dolar.html">DOLAR</a></li>
+                    <li><a href="tempo.html">TEMPO</a></li>
+                    <li><a href="fake.html">FAKE</a></li>
+                    <li><a href="json.html">JSON</a></li>
+                </ul>
+                <nav id="nav">
+                    <button style="background-color: white; color: black;" aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">MENU
+                      <span style="color: black;" id="hamburger"></span>
+                    </button>
+                    <ul id="menu" role="menu">
+                      <li><a href="index.html" style="color: black;">HOME</a></li>
+                      <li><a href="cep.html" style="color: black;">CEP</a></li>
+                      <li><a href="dolar.html" style="color: black;">DOLAR</a></li>
+                      <li><a href="tempo.html" style="color: black;">TEMPO</a></li>
+                      <li><a href="fake.html" style="color: black;">FAKE</a></li>
+                      <li><a href="json.html" style="color: black;">JSON</a></li>
+                    </ul>
+                  </nav>
+            </nav>
+        </div>
+
+    </header>
+
+    <hr>
+    
+    <main>
+
+        <div class="btns">
+            <div class="main-container">
+                <h2 class="texto-secundario">Escolha Um Jogador de Futebol</h2>
+                <div class="btns">
+                    <button class="btn-api" onclick="info" id="btn1">Lionel Messi</button>
+                    <button class="btn-api" onclick="info1" id="btn2">Cristiano Ronaldo</button>
+                    <button class="btn-api" onclick="info2" id="btn3">Neymar JR</button>
+                    <button class="btn-api" onclick="info3" id="btn4">Kylian Mbappe</button>
+                    <button class="btn-api" onclick="info4" id="btn5">Vinícius JR</button>
+                    <button class="btn-api" onclick="info5" id="btn6">Philipe Coutinho</button>
+                </div>
+                <button class="btn-api" id="btn-rfs" onClick="location.reload()" >Atualizar</button>
+            </div>
+        </div>
+
+        <section>
+            <div class="info">
+                <p id="info"></p>
+            </div>
+            <div class="img-info">
+                <img src="" id="img">
+            </div>
+        </section>
+
+    </main> 
+
+    <script src="js/script.js"></script>
+    <script src="js/interna.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dólar</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS Externo-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://kit.fontawesome.com/577791ff15.css" crossorigin="anonymous">
+
+
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <h1 class="logo"><a href="index.html">Consulta API</a></h1>
+            <nav class="header-menu">
+                <ul class="lista">
+                    <li><a href="cep.html">CEP</a></li>
+                    <li><a href="dolar.html">DOLAR</a></li>
+                    <li><a href="tempo.html">TEMPO</a></li>
+                    <li><a href="interna.html">FAKE</a></li>
+                    <li><a href="json.html">JSON</a></li>
+                </ul>
+                <nav id="nav">
+                    <button style="background-color: white;" aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">MENU
+                      <span id="hamburger"></span>
+                    </button>
+                    <ul id="menu" role="menu">
+                      <li><a href="index.html">HOME</a></li>
+                      <li><a href="cep.html">CEP</a></li>
+                      <li><a href="dolar.html">DOLAR</a></li>
+                      <li><a href="tempo.html">TEMPO</a></li>
+                      <li><a href="fake.html">FAKE</a></li>
+                      <li><a href="json.html">JSON</a></li>
+                    </ul>
+                  </nav>
+            </nav>
+        </div>
+
+    </header>
+
+    <hr>
+
+    <main class="dolar">
+            <div style="text-align: center;">
+                <h1 class="texto-primario">Conversor de Dólar</h1>
+                <h2 class="texto-secundario" style="font-size: 1.2rem;">Converta de Real para Dólar</h2>
+                <h2 class="texto-terciario">Preço Dolar<div id="valordolar"></div></h2>
+
+                    <div class="inputs">
+                    <input type="number" id="real" autocomplete="off" data-real placeholder="Digite o valor em Real">
+                    <input type="number" id="total" readonly data-total placeholder="valor em Dólar">
+                    </div>
+    
+                    <button id="botao" class="btn-converter" onclick="total()">Converter</button>
+        </div>
+    </main>
+
+</body>
+
+<!-- Icons -->
+<script src="https://kit.fontawesome.com/577791ff15.js" crossorigin="anonymous"></script>
+
+<script src="js/script.js"></script>
+<script src="js/dolar.js"></script>
+
+</html>

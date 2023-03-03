@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: black;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
+        "Helvetica Neue",Arial,sans-serif,"Apple Color Emoji",
+        "Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+section{
+    margin-top: 20px;
+
+}
+
+.lista-albuns{
+    width: 100%;
+    margin-top: 30px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards{
+    border: 3px solid #ffffff;
+    border-radius: 12px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    margin-left: 30px;
+    font-weight: bold;
+    margin-left: 0 auto;
+    flex-wrap: wrap;
+}
+
+header{
+    width: 100%;
+    height: 7vh;
+    background-color: rgba(36, 35, 35, 0.219);
+}
+
+.preco{
+    background-color: greenyellow;
+    cursor: pointer;
+    color: black;
+}
+
+.menu{
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 16px;
+    flex-wrap: wrap;
+}
+
+.logo{
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.main{
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+section{
+    width: 100%;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+    flex-direction: center;
+    text-align: center;
+}
+
+.banner{
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+section{
+    text-align: center;
+    color: white;
+}
+
+#img-banner{
+    width: 70%;
+    height: 500px;
+}
+
+section h1{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.banner img{
+    margin: 0 auto;
+    display: flex;
+}
+
+.lista{
+    display: flex;
+    list-style: none;
+    /* gap: 9px; */
+    flex-wrap: wrap;
+}
+
+.lista a{
+    color: white;
+    padding: 5px;
+    transform: 2ms ease-in;
+    position: relative;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+.lista a::before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0%;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    transition: all 1s ease;
+}
+
+.menu .lista a:hover::before{
+    width: 100%;
+}
+
+.menu .lista a:hover::after{
+    width: 0%;
+}
+
+/* Menu Hamburger */
+
+#nav{
+    display: none;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: .5rem; /*-espacamentodaspalavras-*/
+  }
+  
+  #menu a {
+    display: block;
+    padding: 5rem;
+  }
+  
+  #btn-mobile {
+    display: none;
+  }
+  
+  @media (max-width: 700px) {
+    #img-banner{
+        width: 100%;
+        height: 400px;
+    }
+    .cards{
+        margin-top: 5%;
+        margin-left: 8px;
+    }
+    #nav{
+        display: block;
+    }
+    #menu {
+      display: block;
+      position: absolute;
+      width: 70%;
+      top: 70px;
+      right: 0px;
+      background: rgb(255, 255, 255);
+      transition: 0.6s;
+      z-index: 1000;
+      height: 0px;
+      color: black;
+      visibility: hidden;
+      overflow-y: hidden;
+    }
+    #nav.active #menu {
+      height: 42vh;
+      visibility: visible;
+      overflow-y: auto;
+    }
+    #menu a {
+      padding: 1rem 0;
+      margin: 0 1rem;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    }
+    #btn-mobile {
+      display: flex;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      gap: 0.5rem;
+    }
+    #hamburger {
+      border-top: 2px solid;
+      width: 20px;
+    }
+    #hamburger::after,
+    #hamburger::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: currentColor;
+      margin-top: 5px;
+      transition: 0.3s;
+      position: relative;
+    }
+    #nav.active #hamburger {
+      border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+      transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+  }
+
+/* Animação Transição */
+
+header{
+    animation: fromTop .7s .2s backwards;
+}
+
+main{
+    animation: fromBottom .7s backwards;
+}
+
+main:nth-child(1){
+    animation-delay: 0;
+}
+
+main:nth-child(2){
+    animation-delay: .4s;
+}
+
+main:nth-child(3){
+    animation-delay: .7s;
+}
+
+@keyframes fromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes fromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width: 700px){
+    .hamburger-menu{
+        display: block;
+    }
+    .lista{
+        display: none;
+    }
+    .fieldtempo{
+        border-radius: 0px;
+    }
+}

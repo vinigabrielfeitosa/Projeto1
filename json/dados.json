@@ -1,0 +1,31 @@
+{
+    "linkpark":{    
+    "name": "Link Park",
+    "album": "Hybrid Theory",
+    "style": "Estilo: Rock",
+    "price": "R$ 19,90",
+    "imagem": "<img src='/imagens/linkpark.jpg' width='100%' height='180px'>"
+},
+    "imaginedragons": {
+    "name": "Imagine Dragons",
+    "album": "Origins",
+    "style": "Estilo: Rock",
+    "price": "R$ 19,90",
+    "imagem": "<img src='/imagens/imaginedragons.jpg' width='100%' height='180px'>"
+},
+    "eminem": {
+    "name": "Eminem",
+    "album": "Greatest Hits",
+    "style": "Estilo: Rap",
+    "price": "R$ 19,90",
+    "imagem": "<img src='/imagens/eminem.jpg' width='100%' height='180px'>"
+},
+    "michaeljackson": {
+    "name": "Michael Jackson",
+    "album": "Thriller",
+    "style": "Estilo: PoP",
+    "price": "R$ 19,90",
+    "imagem": "<img src='/imagens/michaeljackson.jpg' width='100%' height='180px'>"
+}
+}
+

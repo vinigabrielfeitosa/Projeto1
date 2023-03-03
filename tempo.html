@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempo</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+    <header>
+        <div class="menu">
+            <h1 class="logo"><a href="index.html">Consulta API</a></h1>
+            <nav class="header-menu">
+                <ul class="lista">
+                    <li><a href="cep.html">CEP</a></li>
+                    <li><a href="dolar.html">DOLAR</a></li>
+                    <li><a href="tempo.html">TEMPO</a></li>
+                    <li><a href="fake.html">FAKE</a></li>
+                    <li><a href="json.html">JSON</a></li>
+                </ul>
+                <nav id="nav">
+                    <button style="background-color: white;" aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">MENU
+                      <span id="hamburger"></span>
+                    </button>
+                    <ul id="menu" role="menu">
+                      <li><a href="index.html">HOME</a></li>
+                      <li><a href="cep.html">CEP</a></li>
+                      <li><a href="dolar.html">DOLAR</a></li>
+                      <li><a href="tempo.html">TEMPO</a></li>
+                      <li><a href="fake.html">FAKE</a></li>
+                      <li><a href="json.html">JSON</a></li>
+                    </ul>
+                  </nav>
+            </nav>
+        </div>
+
+    </header>
+
+    <hr>
+
+    <main class="main-aux" style="text-align: center;">
+    <fieldset class="fieldtempo">
+        <h1 class="texto-primario" id="txt1" style="color: black; font-size: 30px;">Consulte a temperatura</h1>
+    <input type="search" id="cidade" class="pesquisa" placeholder="Digite o nome da cidade...">
+    <button type="submit" class="botaotemp" onclick="pesquisar()"><i class="fa fa-search" style="font-size:24px"></i></button>
+    <p id="temperatura"></p>
+        </fieldset>
+    </main>
+
+    <script>
+
+        //Biblioteca Axios para realizar uma requisiçao HTTP a API da OpenWeatherMap e obter a previsão
+
+        //Esta linha define a função getWeather como uma função assincrona. Esperando uma resposta da API.
+        function pesquisar(){
+        async function getWeather(){
+
+            var city = document.getElementById("cidade").value;
+
+            //Nesta linha fazendo uma chamada a API usando a biblioteca AXIOS. A URL da API inclui as informacoes de localizacao (Mogi das Cruzes), a unidade de medida (Celsius) e chave API KEY.
+            const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=64ed82577ced7f69cb1687f0ce536131`); 
+
+            //Resposta em (Celsius e a localizacao) e a armazenar na variavel tempCelsius
+
+            const tempCelsius = response.data.main.temp;
+
+            document.querySelector('#temperatura').innerHTML = `A Temperatura em ${city} é de <br> ${tempCelsius.toFixed(2)}°C.  `;
+
+            //Chamando a funcao getWeather para iniciar a consulta a API.
+
+            
+        }
+        getWeather();
+    }
+
+        
+    </script>
+    
+</body>
+
+<script src="js/script.js"></script>
+
+</html>
